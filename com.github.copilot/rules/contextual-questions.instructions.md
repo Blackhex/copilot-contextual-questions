@@ -1,3 +1,8 @@
+---
+applyTo: "**"
+description: Include the problem, viable choices, and trade-offs when asking any question.
+---
+
 # Ask contextual questions
 
 Whenever you ask the user a question, first state the problem and provide
