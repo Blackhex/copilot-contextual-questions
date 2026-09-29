@@ -1,4 +1,4 @@
-# Contextual questions for Copilot
+# Copilot customizations
 
 Copilot plugin rule that asks questions with enough context to make an
 informed choice. Before asking, it states the problem, outlines meaningful
@@ -11,7 +11,7 @@ when the client attaches it. Simple questions stay concise.
 In Copilot CLI:
 
 ```text
-copilot plugin install Blackhex/copilot-contextual-questions
+copilot plugin install Blackhex/copilot-customizations
 ```
 
 In VS Code, install the plugin from its GitHub repository through the
@@ -27,7 +27,7 @@ copilot plugin list
 copilot instruction list
 ```
 
-Confirm that `copilot-contextual-questions` is installed. In a fresh
+Confirm that `copilot-customizations` is installed. In a fresh
 interactive Copilot CLI session, use `/env` to inspect the loaded
 environment and `/instructions` to inspect available instruction
 sources. Plugin installation alone does not prove the rule was attached
@@ -35,4 +35,4 @@ to a particular question. `copilot instruction list` may omit
 plugin-contributed rules depending on client settings and file context.
 
 To update the cached installation after a repository change, run
-`copilot plugin install Blackhex/copilot-contextual-questions` again.
+`copilot plugin install Blackhex/copilot-customizations` again.
