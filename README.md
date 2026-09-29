@@ -1,10 +1,10 @@
 # Contextual questions for Copilot
 
 Copilot plugin rule that asks questions with enough context to make an
-informed choice. Before asking, it states the problem,
-outlines meaningful solutions and their pros and cons, and makes a
-recommendation when appropriate. It applies to ordinary questions and
-Superpowers workflows alike. Simple questions stay concise.
+informed choice. Before asking, it states the problem, outlines meaningful
+solutions and their pros and cons, and makes a recommendation when
+appropriate. The rule covers ordinary questions and Superpowers workflows
+when the client attaches it. Simple questions stay concise.
 
 ## Install
 
@@ -18,9 +18,7 @@ In VS Code, install the plugin from its GitHub repository through the
 Copilot plugin interface. The rule can be applied when a client supports
 plugin rules and the plugin is installed and enabled; no custom agent
 selection or skill invocation is required. File-matched instructions
-may not apply to questions without an associated file. For a reliably
-always-loaded personal preference across workspaces, put the rule's
-text in `$HOME/.copilot/copilot-instructions.md` as well.
+may not apply to questions without an associated file.
 
 ## Verify
 
