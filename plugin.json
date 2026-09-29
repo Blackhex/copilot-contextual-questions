@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "copilot-contextual-questions",
+  "version": "1.0.0",
+  "description": "Give context and trade-offs before asking the user questions."
+}
