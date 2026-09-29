@@ -20,6 +20,22 @@ plugin rules and the plugin is installed and enabled; no custom agent
 selection or skill invocation is required. File-matched instructions
 may not apply to questions without an associated file.
 
+To use an editable local checkout directly in VS Code, add its absolute
+path to your **user** `settings.json` instead of installing a cached copy:
+
+```json
+"chat.pluginLocations": {
+  "C:\\Projekty\\copilot-customizations": true
+}
+```
+
+VS Code watches plugin rule directories and the manifest in this
+configuration, so changes in the checkout can be picked up without
+reinstalling. Start a new chat to use updated instructions in a
+conversation; an existing chat may retain its earlier context. For
+Copilot CLI, use `copilot --plugin-dir C:\Projekty\copilot-customizations`
+to load the working tree for that invocation.
+
 ## Verify
 
 ```text
