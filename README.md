@@ -1,10 +1,22 @@
 # Copilot customizations
 
-Copilot plugin rule that asks questions with enough context to make an
+Copilot plugin rules for contextual questions and long-running tasks.
+
+Before asking questions, the contextual-questions rule gives enough context to make an
 informed choice. Before asking, it states the problem, outlines meaningful
 solutions and their pros and cons, and makes a recommendation when
 appropriate. The rule covers ordinary questions and Superpowers workflows
 when the client attaches it. Simple questions stay concise.
+
+The long-running-tasks rule prefers synchronous execution for one-shot
+commands. If a command is detached, the agent records its execution ID,
+expected result, and next action. When invoked after completion, it reads
+the final output, checks the result, and resumes the original request
+without a separate "continue" message.
+
+Instructions cannot make VS Code wake an agent or deliver a missing
+completion notification. They guide continuation when the agent is
+invoked; client support for notifications is still required.
 
 ## Install
 
@@ -15,7 +27,7 @@ copilot plugin install Blackhex/copilot-customizations
 ```
 
 In VS Code, install the plugin from its GitHub repository through the
-Copilot plugin interface. The rule can be applied when a client supports
+Copilot plugin interface. The rules can be applied when a client supports
 plugin rules and the plugin is installed and enabled; no custom agent
 selection or skill invocation is required. File-matched instructions
 may not apply to questions without an associated file.
@@ -46,8 +58,8 @@ copilot instruction list
 Confirm that `copilot-customizations` is installed. In a fresh
 interactive Copilot CLI session, use `/env` to inspect the loaded
 environment and `/instructions` to inspect available instruction
-sources. Plugin installation alone does not prove the rule was attached
-to a particular question. `copilot instruction list` may omit
+sources. Plugin installation alone does not prove the rules were attached
+to a particular request. `copilot instruction list` may omit
 plugin-contributed rules depending on client settings and file context.
 
 To update the cached installation after a repository change, run

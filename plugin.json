@@ -2,5 +2,5 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "copilot-customizations",
   "version": "1.0.0",
-  "description": "Give context and trade-offs before asking the user questions."
+  "description": "Give context before questions and resume pending work after long-running commands."
 }
